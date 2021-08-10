@@ -2,13 +2,13 @@ require_relative 'lib/tailwind_for_ruby/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "tailwind_for_ruby"
-  spec.version       = TailwindForRuby::VERSION
+  spec.version       = TailwindForRuby::0.0.1
   spec.authors       = ["Traceton Timmerman"]
   spec.email         = ["traceton.timmerman@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{a tailwind ui view generator for ruby}
+  spec.description   = %q{a tailwind ui view generator for ruby}
+  spec.homepage      = "None yet"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
