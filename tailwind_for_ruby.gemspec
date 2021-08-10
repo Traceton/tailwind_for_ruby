@@ -2,21 +2,21 @@ require_relative 'lib/tailwind_for_ruby/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "tailwind_for_ruby"
-  spec.version       = TailwindForRuby::0.0.1
+  spec.version       = TailwindForRuby::VERSION
   spec.authors       = ["Traceton Timmerman"]
   spec.email         = ["traceton.timmerman@gmail.com"]
 
   spec.summary       = %q{a tailwind ui view generator for ruby}
   spec.description   = %q{a tailwind ui view generator for ruby}
-  spec.homepage      = "None yet"
+  spec.homepage      = "https://github.com/tjcharm/tailwind_for_ruby"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  # spec.metadata["allowed_push_host"] = "https://github.com/tjcharm/tailwind_for_ruby"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/tjcharm/tailwind_for_ruby"
+  # spec.metadata["changelog_uri"] = "https://github.com/tjcharm/tailwind_for_ruby"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
