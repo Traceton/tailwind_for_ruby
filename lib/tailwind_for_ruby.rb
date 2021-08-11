@@ -1,6 +1,10 @@
 require "tailwind_for_ruby/version"
 
 module TailwindForRuby
-  class Error < StandardError; end
-  # Your code goes here...
+  
+  def generate
+    puts "Commands called, Successful test"
+  end   
+
+
 end
