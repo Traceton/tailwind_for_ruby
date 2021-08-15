@@ -1,7 +1,7 @@
 module TailwindForRuby
     class Cli
         def self.Start(userInput = " ")
-            puts "cli started"
+            puts userInput
         end    
     end    
 end    

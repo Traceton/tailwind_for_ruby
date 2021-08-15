@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require "tailwind_for_ruby"
+require "tailwind_for_ruby/Cli"
 
-TailwindForRuby::Intro.TestPrint()
+TailwindForRuby::Cli.Start(ARGV)
