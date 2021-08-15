@@ -6,7 +6,7 @@ module TailwindForRuby
             include Thor::Actions
             argument :command_name, :type => :string
             argument :model_name, :type => :string
-            argument :model_attributes, :type => :hash
+            argument :model_attributes, :type => :string
 
               def self.source_root
                 File.dirname(__FILE__) + "/view"
