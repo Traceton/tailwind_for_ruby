@@ -1,0 +1,4 @@
+command name ---> <%= command_name %>
+model name ---> <%= model_name %>
+model attributes ---> <%= model_attributes %>
+

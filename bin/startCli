@@ -2,4 +2,4 @@
 
 require "tailwind_for_ruby/Cli"
 
-TailwindForRuby::Cli.Start(ARGV)
+TailwindForRuby::Cli.start
