@@ -2,7 +2,7 @@ require "thor/group"
 require_relative "generate_forms"
 
 module TailwindForRuby
-    module Generators
+    module Generator_controller
         class View < Thor::Group
             include Generate_Forms
             include Thor::Actions
