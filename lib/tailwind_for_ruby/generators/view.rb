@@ -6,7 +6,7 @@ module TailwindForRuby
             include Thor::Actions
             argument :tailwind_ui_component, :type => :string
             argument :model_name, :type => :string
-            argument :model_attributes, :type => :string
+            argument :model_attributes, :type => :array
 
               def self.source_root
                 File.dirname(__FILE__) + "/view/templates"
