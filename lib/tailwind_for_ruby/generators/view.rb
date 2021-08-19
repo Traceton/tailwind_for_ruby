@@ -1,8 +1,10 @@
 require "thor/group"
+require_relative "generate_forms"
 
 module TailwindForRuby
     module Generators
         class View < Thor::Group
+            include Generate_Forms
             include Thor::Actions
             argument :tailwind_ui_component, :type => :string
             argument :model_name, :type => :string
@@ -31,11 +33,3 @@ module TailwindForRuby
         end
     end
 end    
-
-
-    def generate_forms(tailwind_ui_component,model_name,*model_attributes)
-      puts "tailwind ui component ---> #{tailwind_ui_component}"
-      puts "model name ---> #{model_name}"
-      puts "model attributes ---> #{model_attributes}"
-    end
-
