@@ -21,7 +21,8 @@ module TailwindForRuby
               end
               
               def generate_view
-                generate_forms(tailwind_ui_component,model_name,*model_attributes)
+                final_form = generate_forms(tailwind_ui_component,model_name,*model_attributes)
+                puts final_form
                 ### Forms
                 ## Input Groups
                 # input_with_label
