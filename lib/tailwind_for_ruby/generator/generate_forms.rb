@@ -2,15 +2,15 @@ require "CGI"
 
 module Generate_Forms
     def generate_forms(tailwind_ui_component,model_name,*model_attributes)
-        # puts "tailwind ui component ---> #{tailwind_ui_component}"
-        # puts "model name ---> #{model_name}"
-        # puts "model attributes ---> #{model_attributes}"
-        # final_form = "tailwind ui component ---> #{tailwind_ui_component} and model name ---> #{model_name} and model attributes ---> #{model_attributes}"
+        
+        @final_form = []
 
-        final_form = []
+        def generate_input_with_label(model_name,*model_attributes)
+            model_attributes.map { |model_attribute|  @final_form.push("<h1 class='bg-gray-500'>  #{model_attribute}  </h1>") }
+        end
 
-        model_attributes.map { |model_attribute|  final_form.push("<h1 class='bg-gray-500'>  #{model_attribute}  </h1>") }
-
-        return final_form
+        generate_input_with_label(model_name,*model_attributes) if tailwind_ui_component == "input_with_label"
+        
+        return @final_form
     end
 end

@@ -21,7 +21,10 @@ module TailwindForRuby
               end
               
               def generate_view
-                final_form = generate_forms(tailwind_ui_component,model_name,*model_attributes)
+                tailwind_ui_form_components = ["input_with_label","input_with_label_and_help_text"]
+
+                final_form = generate_forms(tailwind_ui_component,model_name,*model_attributes) if tailwind_ui_form_components.include?(tailwind_ui_component)  
+                
                 puts final_form
                 ### Forms
                 ## Input Groups
