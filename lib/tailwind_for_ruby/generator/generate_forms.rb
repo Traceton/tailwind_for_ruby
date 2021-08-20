@@ -7,7 +7,7 @@ module Generate_Forms
         # puts "model attributes ---> #{model_attributes}"
         # final_form = "tailwind ui component ---> #{tailwind_ui_component} and model name ---> #{model_name} and model attributes ---> #{model_attributes}"
 
-        model_attributes.map { |model_attribute| puts CGI.unescape('<h1 class="bg-gray-500"> <%= model_attributes %> </h1>') }
+        model_attributes.map { |model_attribute| puts "<h1 class='bg-gray-500'>  #{model_attributes}  </h1>" }
 
         final_form = CGI.unescape('<h1 class="bg-gray-500"> #{model_attributes} </h1>')
     end
