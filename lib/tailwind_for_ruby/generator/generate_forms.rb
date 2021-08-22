@@ -6,6 +6,7 @@ module Generate_Forms
         @final_form = []
 
         def generate_input_with_label(model_name,*model_attributes)
+            input_with_label = []
             model_attributes.map { |model_attribute|  @final_form.push("<h1 class='bg-gray-500'>  #{model_attribute}  </h1>") }
         end
 
