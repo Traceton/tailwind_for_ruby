@@ -7,7 +7,7 @@ module Generate_Forms
 
 
 
-
+        #1 ApplicationUI/Forms/InputGroups/input_with_label
         def generate_input_with_label(model_name,*model_attributes)
             input_with_label = []
             model_attributes.map do |model_attribute|  
@@ -22,6 +22,7 @@ module Generate_Forms
             end    
         end
 
+        #1 ApplicationUI/Forms/InputGroups/input_with_label
         generate_input_with_label(model_name,*model_attributes) if tailwind_ui_component == "input_with_label"
 
 
