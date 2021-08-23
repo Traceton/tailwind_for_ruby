@@ -27,7 +27,7 @@ module TailwindForRuby
                 
                 # puts final_form.gsub("\\n","") if final_form != nil
 
-                File.write("generated_tailwind_components/#{tailwind_ui_component}-#{model_name}", final_form.gsub("\\n","")) if final_form != nil
+                File.write("generated_tailwind_components/#{tailwind_ui_component}-#{model_name}.html.erb", final_form.gsub("\\n","").to_s) if final_form != nil
    
               end  
               
