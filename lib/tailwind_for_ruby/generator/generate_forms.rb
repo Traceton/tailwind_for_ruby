@@ -19,7 +19,6 @@ module Generate_Forms
                     <input type='text' name='#{attribute_name}' id='#{attribute_name}' class='shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'>
                 </div>
                 </div>"
-                puts attribute 
                 @final_form.push(attribute) 
             end    
         end
@@ -27,10 +26,7 @@ module Generate_Forms
         #1 ApplicationUI/Forms/InputGroups/input_with_label
         generate_input_with_label(model_name,*model_attributes) if tailwind_ui_component == "input_with_label"
 
-    
-
-
         # component returned to the "UI" class
-        return @final_form.to_s.gsub("[", "").gsub("]", "")
+        return @final_form.to_s.gsub("[", "").gsub("]", "").gsub("\\n","").gsub("\"","").gsub("\,","")
     end
 end
