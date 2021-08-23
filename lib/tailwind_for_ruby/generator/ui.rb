@@ -23,9 +23,11 @@ module TailwindForRuby
               def generate_view
                 tailwind_ui_form_components = ["input_with_label","input_with_label_and_help_text"]
 
-                final_form = generate_forms(tailwind_ui_component,model_name,*model_attributes) if tailwind_ui_form_components.include?(tailwind_ui_component)  
+                final_form = generate_forms(tailwind_ui_component,model_name,*model_attributes) if tailwind_ui_form_components.include?(tailwind_ui_component) 
+                
+                puts final_form if final_form != nil
 
-                File.write("generated_tailwind_components/#{tailwind_ui_component}-#{model_name}.html.erb", final_form) if final_form != nil
+                File.write("generated_tailwind_components/#{tailwind_ui_component}-#{model_name}", final_form) if final_form != nil
    
               end  
               
