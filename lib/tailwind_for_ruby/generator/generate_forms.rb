@@ -14,10 +14,11 @@ module Generate_Forms
                 attribute_name = model_attribute.split(":")[0]
                 attribute = "
                 <div>
-                <label for='#{attribute_name}' class='block text-sm font-medium text-gray-700'>#{attribute_name}</label>
-                <div class='mt-1'>
-                    <input type='text' name='#{attribute_name}' id='#{attribute_name}' class='shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'>
-                </div>
+                    <label for='#{attribute_name}' class='block text-sm font-medium text-gray-700'>#{attribute_name}</label>
+                    <div class='mt-1'>
+                        <input type='text' name='#{attribute_name}' id='#{attribute_name}' 
+                        class='shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'>
+                    </div>
                 </div>"
                 @final_form.push(attribute) 
             end    
