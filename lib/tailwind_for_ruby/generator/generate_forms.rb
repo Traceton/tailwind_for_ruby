@@ -29,6 +29,6 @@ module Generate_Forms
 
 
         # component returned to the "UI" class
-        return @final_form
+        return @final_form.to_s
     end
 end

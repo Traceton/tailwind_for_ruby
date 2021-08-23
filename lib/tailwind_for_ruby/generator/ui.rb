@@ -25,9 +25,9 @@ module TailwindForRuby
 
                 final_form = generate_forms(tailwind_ui_component,model_name,*model_attributes) if tailwind_ui_form_components.include?(tailwind_ui_component) 
                 
-                puts final_form if final_form != nil
+                puts final_form.gsub("\\n","") if final_form != nil
 
-                File.write("generated_tailwind_components/#{tailwind_ui_component}-#{model_name}", final_form) if final_form != nil
+                # File.write("generated_tailwind_components/#{tailwind_ui_component}-#{model_name}", final_form) if final_form != nil
    
               end  
               
