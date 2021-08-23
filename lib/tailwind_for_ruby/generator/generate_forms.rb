@@ -27,6 +27,6 @@ module Generate_Forms
         generate_input_with_label(model_name,*model_attributes) if tailwind_ui_component == "input_with_label"
 
         # component returned to the "UI" class
-        return @final_form.to_s.gsub("[", "").gsub("]", "").gsub("\\n","").gsub("\"","").gsub("\,","")
+        return @final_form.to_s.gsub("[", "").gsub("]", "").gsub("\\n","").gsub("\"","").gsub("\,","").gsub(" ","")
     end
 end
