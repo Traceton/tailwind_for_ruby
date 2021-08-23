@@ -26,12 +26,7 @@ module TailwindForRuby
                 final_form = generate_forms(tailwind_ui_component,model_name,*model_attributes) if tailwind_ui_form_components.include?(tailwind_ui_component)  
                 
                 puts final_form
-                ### Forms
-                ## Input Groups
-                # input_with_label
-                # template("forms/input_with_label.txt", "generated_tailwind_components/#{tailwind_ui_component}s.html.erb") if tailwind_ui_component == "input_with_label"
-                # input_with_label_and_help_text
-                # template("forms/input_with_label_and_help_text.txt", "generated_tailwind_components/#{tailwind_ui_component}s.html.erb") if tailwind_ui_component == "input_with_label_and_help_text"
+            
               end  
               
         end
