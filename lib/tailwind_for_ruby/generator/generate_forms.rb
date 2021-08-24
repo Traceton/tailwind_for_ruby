@@ -11,19 +11,39 @@ module Generate_Forms
       model_attributes.map do |model_attribute|
         attribute_name = model_attribute.split(':')[0]
         attribute = "
-                <div>
-                    <label for='#{attribute_name}' class='block text-sm font-medium text-gray-700'>#{attribute_name}</label>
-                    <div class='mt-1'>
-                        <input type='text' name='#{attribute_name}' id='#{attribute_name}'
-                        class='shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'>
-                    </div>
-                </div>"
+          <div>
+            <label for='#{attribute_name}' class='block text-sm font-medium text-gray-700'>#{attribute_name}</label>
+              <div class='mt-1'>
+                <input type='text' name='#{attribute_name}' id='#{attribute_name}'
+                class='shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'>
+              </div>
+          </div>"
         @final_form.push(attribute)
       end
     end
 
     # 1 ApplicationUI/Forms/InputGroups/input_with_label
     generate_input_with_label(model_name, *model_attributes) if tailwind_ui_component == 'input_with_label'
+
+    # 2 ApplicationUI/Forms/InputGroups/input_with_label_and_help_text
+    def generate_input_with_label_and_help_text(_model_name, *model_attributes)
+      input_with_label_and_help_text = []
+      model_attributes.map do |model_attribute|
+        attribute_name = model_attribute.split(':')[0]
+        attribute = "
+        <div>
+          <label for='#{attribute_name}' class='block text-sm font-medium text-gray-700'>#{attribute_name}</label>
+          <div class='mt-1'>
+            <input type='text' name='#{attribute_name}' id='#{attribute_name}' class='shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'>
+          </div>
+          <p class='mt-2 text-sm text-gray-500' id='#{attribute_name}-description'>We'll only use this for spam.</p>
+      </div>"
+        @final_form.push(attribute)
+      end
+    end
+
+    # 2 ApplicationUI/Forms/InputGroups/input_with_label_and_help_text
+    generate_input_with_label_and_help_text(model_name, *model_attributes) if tailwind_ui_component == 'input_with_label_and_help_text'
 
     # component returned to the "UI" class
     @final_form.to_s.gsub('[', '').gsub(']', '').gsub('\\n', '').gsub('"', '').gsub("\,", '')
