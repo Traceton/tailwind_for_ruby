@@ -1,10 +1,12 @@
 require 'thor/group'
 require_relative 'generate_forms'
+require_relative 'helpers'
 
 module TailwindForRuby
   module Generator_controller
     class Ui < Thor::Group
       include Generate_Forms
+      include Helpers
       include Thor::Actions
       argument :tailwind_ui_component, type: :string
       argument :model_name, type: :string
@@ -21,7 +23,8 @@ module TailwindForRuby
       end
 
       def generate_view
-        tailwind_ui_form_components = %w[input_with_label input_with_label_and_help_text]
+        determine_input_type(tailwind_ui_component)
+        tailwind_ui_form_components = %w[]
 
         if tailwind_ui_form_components.include?(tailwind_ui_component)
           final_component = generate_forms(tailwind_ui_component, model_name,
