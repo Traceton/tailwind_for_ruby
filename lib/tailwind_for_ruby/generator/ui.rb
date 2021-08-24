@@ -23,7 +23,7 @@ module TailwindForRuby
       end
 
       def generate_view
-        determine_input_type(tailwind_ui_component)
+        determine_tailwind_group(tailwind_ui_component)
         tailwind_ui_form_components = %w[]
 
         if tailwind_ui_form_components.include?(tailwind_ui_component)
