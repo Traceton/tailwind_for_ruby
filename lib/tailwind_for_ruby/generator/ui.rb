@@ -35,6 +35,7 @@ module TailwindForRuby
           File.write("generated_tailwind_components/#{tailwind_ui_component}-#{model_name}.html.erb",
            final_component)
         end
+        
       end
     end
   end
