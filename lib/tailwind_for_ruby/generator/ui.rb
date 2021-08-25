@@ -24,16 +24,16 @@ module TailwindForRuby
 
       def generate_view
         tailwind_group = determine_tailwind_group(tailwind_ui_component)
-        tailwind_ui_form_components = %w[]
 
-        if tailwind_ui_form_components.include?(tailwind_ui_component)
+        # generate forms
+        if tailwind_group == "forms"
           final_component = generate_forms(tailwind_ui_component, model_name,
-                                           *model_attributes)
+             *model_attributes)
         end
 
         unless final_component.nil?
           File.write("generated_tailwind_components/#{tailwind_ui_component}-#{model_name}.html.erb",
-                     final_component)
+           final_component)
         end
       end
     end
