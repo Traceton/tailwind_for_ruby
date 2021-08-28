@@ -1,6 +1,6 @@
 
 
-    $test_object = {"group1": %w[this is group one], "group2": %w[this is group two]}
+    $test_object = {"group1" => %w[this is group one], "group2" => %w[this is group 2]}
 
     $application_shells = %w[ stacked_layouts: %w[ light_nav_with_bottom_border light_nav_on_gray_background
     dark_nav_with_white_page_header branded_nav_with_compact_white_page_header dark_nav_with_overlap

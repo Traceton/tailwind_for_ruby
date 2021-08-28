@@ -21,7 +21,7 @@ module Helpers
         tailwind_group = determine_tailwind_group(tailwind_ui_component)
         
         if tailwind_group == "forms"
-            puts $test_object.:group1
+            puts $test_object["group1"]
         else
             puts "tailwind ui sub group not found"
         end    
